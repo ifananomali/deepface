@@ -438,7 +438,7 @@ def analysis(db_path, model_name, distance_metric, enable_face_analysis = True
 				cv2.rectangle(freeze_img, (10, 10), (90, 50), (67,67,67), -10)
 				cv2.putText(freeze_img, str(time_left), (40, 40), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 255, 255), 1)
 
-				cv2.imshow('img', freeze_img)
+				cv2.imshow('Webcam', freeze_img)
 
 				freezed_frame = freezed_frame + 1
 			else:
@@ -448,7 +448,7 @@ def analysis(db_path, model_name, distance_metric, enable_face_analysis = True
 				freezed_frame = 0
 
 		else:
-			cv2.imshow('img',img)
+			cv2.imshow('Webcam',img)
 
 		if cv2.waitKey(1) & 0xFF == ord('q'): #press q to quit
 			break
